@@ -11,18 +11,13 @@ filters: &filters
 workflows:
   lint-pack:
     jobs:
-      - orb-tools/lint:
-          filters: *filters
-      - orb-tools/pack:
-          filters: *filters
-      - orb-tools/review:
-          filters: *filters
-      - shellcheck/check:
-          filters: *filters
+      - orb-tools/lint
+      - orb-tools/pack
+      - orb-tools/review
+      - shellcheck/check
       # Triggers the next workflow in the Orb Development Kit.
       - orb-tools/continue:
           pipeline_number: << pipeline.number >>
           vcs_type: << pipeline.project.type >>
           orb_name: nativeedge-plugins-orb
           requires: [orb-tools/lint, orb-tools/pack, orb-tools/review, shellcheck/check]
-          filters: *filters
