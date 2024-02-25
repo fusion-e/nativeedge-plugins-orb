@@ -1,0 +1,27 @@
+description: >
+  This command runs the unit tests for a plugin
+steps:
+  - run:
+      name: Have a shell running
+      command: /bin/bash
+  - save_cache:
+      name: Store Eggs.
+      key: deps-{{ .Environment.CIRCLE_PROJECT_REPONAME}}
+      paths:
+        - nativeedge_ansible_plugin.egg-info
+        - nativeedge_aws_plugin.egg-info
+        - nativeedge_azure_plugin.egg-info
+        - nativeedge_fabric_plugin.egg-info
+        - nativeedge_gcp_plugin.egg-info
+        - nativeedge_helm_plugin.egg-info
+        - nativeedge_kubernetes_plugin.egg-info
+        - nativeedge_libvirt_plugin.egg-info
+        - nativeedge_openstack_plugin.egg-info
+        - nativeedge_spotocean_plugin.egg-info
+        - nativeedge_serverless_plugin.egg-info
+        - nativeedge_terraform_plugin.egg-info
+        - nativeedge_terragrunt_plugin.egg-info
+        - nativeedge_utilities_plugin.egg-info
+        - nativeedge_vcloud_plugin.egg-info
+        - nativeedge_vsphere_plugin.egg-info
+        - .tox
