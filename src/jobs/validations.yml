@@ -1,0 +1,10 @@
+description: Validate the versioning, YAMLs, and PRs.
+executor: ecosystem
+steps:
+  - gh/install
+  - gh/setup
+  - gh/clone
+  - init_submodules
+  - validate_plugin_version
+  - validate_plugin_yaml
+  - validate_pulls

@@ -1,0 +1,7 @@
+description: Creates the package.
+steps:
+  - attach_workspace:
+      at: workspace
+  - run:
+      name: Create Package
+      command: <<include(scripts/package_release.sh)>>

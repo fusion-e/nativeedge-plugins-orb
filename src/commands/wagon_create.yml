@@ -2,9 +2,6 @@ description: >
   This command builds wagons
 steps:
   - run:
-      name: Add Submodules
-      command: git submodule update --init --recursive
-  - run:
       name: Create Workspace Build directory.
       command: mkdir -p workspace/build
   - run:

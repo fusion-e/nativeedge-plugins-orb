@@ -1,0 +1,6 @@
+description: >
+  This command validates the pulls of a branch.
+steps:
+  - run:
+      name: "Validate Pulls"
+      command: bash -c "/bin/bash -c ecosystem-test validate-pulls"

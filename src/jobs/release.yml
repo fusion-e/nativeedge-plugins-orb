@@ -1,0 +1,8 @@
+description: Create new release.
+executor: ecosystem
+steps:
+  - gh/install
+  - gh/setup
+  - gh/clone
+  - create_package
+  - upload_assets

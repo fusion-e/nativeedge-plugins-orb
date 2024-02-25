@@ -1,10 +1,5 @@
-description: >
-  Run unittests
-# What will this job do?
-# Descriptions should be short, simple, and clear.
-
+description: Run the unittests from tox (via make).
 executor: unittesting
-
 steps:
   - gh/install
   - gh/setup
