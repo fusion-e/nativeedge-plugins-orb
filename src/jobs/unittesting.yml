@@ -9,3 +9,4 @@ steps:
   - gh/install
   - gh/setup
   - gh/clone
+  - run_tests
