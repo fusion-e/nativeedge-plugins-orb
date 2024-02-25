@@ -1,9 +1,6 @@
 description: >
   This command runs the unit tests for a plugin
 steps:
-  - run:
-      name: Have a shell running
-      command: /bin/bash
   - save_cache:
       name: Store Eggs.
       key: deps-{{ .Environment.CIRCLE_PROJECT_REPONAME}}
