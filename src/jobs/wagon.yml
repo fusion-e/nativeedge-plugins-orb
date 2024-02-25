@@ -1,0 +1,10 @@
+description: >
+  Generate a wagon
+
+executor: wagon_build
+
+steps:
+  - gh/install
+  - gh/setup
+  - gh/clone
+  - wagon_create

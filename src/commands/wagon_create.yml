@@ -1,0 +1,13 @@
+description: >
+  This command builds wagons
+steps:
+  - run:
+      name: Make compile, make wheels and wagon create.
+      command: <<include(scripts/wagon.sh)>>
+  - run:
+      name: copy wagon to workspace
+      command: cp *.wgn workspace/build/
+  - persist_to_workspace:
+      root: workspace
+      paths:
+        - build/*
