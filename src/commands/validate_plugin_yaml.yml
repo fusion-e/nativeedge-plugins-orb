@@ -3,4 +3,4 @@ description: >
 steps:
   - run:
       name: "Validate Plugin YAMLs"
-      command: bash -c "/bin/bash -c ecosystem-test validate-plugin-yamls"
+      command: ecosystem-test validate-plugin-yamls

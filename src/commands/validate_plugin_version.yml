@@ -3,4 +3,4 @@ description: >
 steps:
   - run:
       name: "Validate Plugin Version"
-      command: bash -c "/bin/bash -c ecosystem-test validate-plugin-version"
+      command: ecosystem-test validate-plugin-version
