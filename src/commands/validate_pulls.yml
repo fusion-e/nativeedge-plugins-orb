@@ -3,4 +3,4 @@ description: >
 steps:
   - run:
       name: "Validate Pulls"
-      command: bash -c "/bin/bash -c ecosystem-test validate-pulls"
+      command: ecosystem-test validate-pulls
