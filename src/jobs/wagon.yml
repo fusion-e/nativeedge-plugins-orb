@@ -1,10 +1,8 @@
-description: >
-  Generate a wagon
-
+description: Generate the wagon.
 executor: wagon_build
-
 steps:
   - gh/install
   - gh/setup
   - gh/clone
+  - init_submodules
   - wagon_create

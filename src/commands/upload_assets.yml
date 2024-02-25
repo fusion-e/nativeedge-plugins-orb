@@ -1,0 +1,10 @@
+description: Creates the package.
+steps:
+  - attach_workspace:
+      at: workspace
+  - run:
+      name: Upload release assets.
+      command: <<include(scripts/upload_assets.sh)>>
+  - run:
+      name: Upload latest package assets.
+      command: <<include(scripts/package_release.sh)>>

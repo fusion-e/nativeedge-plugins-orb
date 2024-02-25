@@ -1,0 +1,6 @@
+description: >
+  This command validates the YAMLs of a plugin
+steps:
+  - run:
+      name: "Validate Plugin YAMLs"
+      command: bash -c "/bin/bash -c ecosystem-test validate-plugin-yamls"
