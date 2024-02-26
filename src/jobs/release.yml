@@ -4,5 +4,6 @@ steps:
   - gh/install
   - gh/setup
   - gh/clone
+  - checkout
   - create_package
   - upload_assets

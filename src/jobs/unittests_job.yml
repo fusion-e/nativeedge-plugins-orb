@@ -4,4 +4,5 @@ steps:
   - gh/install
   - gh/setup
   - gh/clone
+  - checkout
   - run_tests_command

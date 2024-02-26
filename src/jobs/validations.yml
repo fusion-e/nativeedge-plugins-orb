@@ -4,6 +4,7 @@ steps:
   - gh/install
   - gh/setup
   - gh/clone
+  - checkout
   - init_submodules
   - validate_plugin_version
   - validate_plugin_yaml
