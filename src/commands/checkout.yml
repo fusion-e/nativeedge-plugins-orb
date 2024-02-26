@@ -1,0 +1,7 @@
+description: This is git checkout branch.
+steps:
+  - run:
+      name: git checkout
+      command: <<include(scripts/checkout.sh)>>
+  - attach_workspace:
+      at: workspace
