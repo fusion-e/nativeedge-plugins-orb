@@ -5,4 +5,5 @@ steps:
   - gh/setup
   - gh/clone
   - checkout
+  - init_submodules
   - run_tests_command
