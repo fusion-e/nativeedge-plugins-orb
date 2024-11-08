@@ -15,7 +15,6 @@ workflows:
       - orb-tools/pack
       - orb-tools/review
       - shellcheck/check
-      # Triggers the next workflow in the Orb Development Kit.
       - orb-tools/continue:
           pipeline_number: << pipeline.number >>
           vcs_type: << pipeline.project.type >>
@@ -24,7 +23,8 @@ workflows:
       - orb-tools/publish:
           vcs_type: << pipeline.project.type >>
           orb_name: nativeedge-plugins-orb
-          requires: [orb-tools/continue]
+          requires:
+            - orb-tools/continue
           context: orb-publisher
           filters:
             branches:
