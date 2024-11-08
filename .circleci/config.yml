@@ -26,6 +26,7 @@ workflows:
           vcs_type: << pipeline.project.type >>
           pub_type: production
           context: orb-publisher
+          requires: [orb-tools/pack]
           filters:
             branches:
               ignore: /.*/
