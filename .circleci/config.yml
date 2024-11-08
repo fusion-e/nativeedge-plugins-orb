@@ -22,6 +22,12 @@ workflows:
           orb_name: nativeedge-plugins-orb
           requires: [orb-tools/lint, orb-tools/pack, orb-tools/review, shellcheck/check]
       - orb-tools/publish:
+          orb_name: circleci/aws-ecr
           vcs_type: << pipeline.project.type >>
-          orb_name: nativeedge-plugins-orb
-          requires: [orb-tools/lint, orb-tools/review, orb-tools/pack, shellcheck/check, orb-tools/continue]
+          pub_type: production
+          context: orb-publisher
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
