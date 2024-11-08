@@ -21,3 +21,7 @@ workflows:
           vcs_type: << pipeline.project.type >>
           orb_name: nativeedge-plugins-orb
           requires: [orb-tools/lint, orb-tools/pack, orb-tools/review, shellcheck/check]
+      - orb-tools/publish:
+          vcs_type: << pipeline.project.type >>
+          orb_name: nativeedge-plugins-orb
+          requires: [orb-tools/lint, orb-tools/review, orb-tools/pack, shellcheck/check, orb-tools/continue]
